@@ -23,18 +23,21 @@ public class LeitorRemessa {
     	List<String> conteudos = ler(caminhoArquivo);
     	List<Registro> registros = new ArrayList();
     	
-	    for(String linha:conteudos) {
-	    	String [] campos = linha.split(";");
-	    	Registro r = new Registro();
-	    	r.setProfissao(campos[0]);
-	    	r.setNomeCompleto(campos[1]);
-	    	r.setMinimoSalario(Double.valueOf(campos[2]));
-	    	
-	    	r.setCpf(campos[5]);
-	    	
-	    	
-	    	registros.add(r);
-	    }
+    	   for(String linha:conteudos) {
+   	    	String [] campos = linha.split(";");
+   	    	Registro r = new Registro();
+   	    	r.setProfissao(campos[0]);
+   	    	r.setNomeCompleto(campos[1]);
+   	    	r.setMinimoSalario(Double.valueOf(campos[2]));
+   	    	r.setMaximoSalario(Double.valueOf(campos[3]));
+   	        
+   	   
+   	    	r.setCpf(campos[5]);
+   	    	r.setRg(campos[6]);
+   	    	r.setUf(Estado.valueOf(campos[11]));
+   	    	r.setTelefone(campos[12]);
+   	        r.setNaturalidade(campos[13]);
+   	        r.setEmail(campos[14]);
 	    
 	    return  registros;
 	}

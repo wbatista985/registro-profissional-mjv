@@ -11,7 +11,8 @@ public class Registro {
 	private String cpf;
 	private String rg;
 	private Endereco endereco;
-	private Long telefone;
+	private Estado uf;
+	private String telefone;
 	private String naturalidade;
 	private String email;
 	
@@ -63,10 +64,16 @@ public class Registro {
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
-	public Long getTelefone() {
+	public Estado getUf() {
+		return uf;
+	}
+	public void setUf(Estado uf) {
+		this.uf = uf;
+	}
+	public String getTelefone() {
 		return telefone;
 	}
-	public void setTelefone(Long telefone) {
+	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
 	public String getNaturalidade() {
@@ -81,15 +88,15 @@ public class Registro {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
 	@Override
 	public String toString() {
 		return "Registro [profissao=" + profissao + ", nomeCompleto=" + nomeCompleto + ", minimoSalario="
 				+ minimoSalario + ", maximoSalario=" + maximoSalario + ", dataNascimento=" + dataNascimento + ", cpf="
-				+ cpf + ", rg=" + rg + ", endereco=" + endereco + ", telefone=" + telefone + ", naturalidade="
+				+ cpf + ", rg=" + rg + ", endereco=" + endereco + ", uf=" + uf + ", telefone=" + telefone + ", naturalidade="
 				+ naturalidade + ", email=" + email + "]";
-	}
+	}	
 	
-	
-	
+}	
 
-}
+
