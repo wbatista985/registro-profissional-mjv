@@ -23,9 +23,34 @@ public class FormatterUtil {
 		String cpfFormatado = part1.concat(".").concat(part2).concat(".").concat(part3).concat("-").concat(part4);
 		return cpfFormatado;
 	}
+	
 	public static String data(LocalDate localDate) {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		return localDate.format(formatter);
 	}
+	
+	public static String formataTelefone(String telefone) {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("(");
 
+        String telString = String.valueOf(telefone);
+
+        if (telString.length() == 10) {
+            stringBuilder.append(telString, 0, 2).append(") ");
+            stringBuilder.append(telString, 2, 6).append("-");
+            stringBuilder.append(telString, 6, 10);
+
+            return stringBuilder.toString();
+
+        } else if (telString.length() == 11) {
+            stringBuilder.append(telString, 0, 2).append(") ");
+            stringBuilder.append(telString, 2, 3).append(" ");
+            stringBuilder.append(telString, 3, 7).append("-");
+            stringBuilder.append(telString, 7, 11);
+
+            return stringBuilder.toString();
+        }
+        return telString;
+
+	}
 }

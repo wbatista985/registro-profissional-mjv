@@ -41,8 +41,10 @@ public class LeitorRemessa {
 	    	r.setBairro(campos[9]);
 	    	r.setCidade(campos[10]);
 	    	r.setUf(Estado.valueOf(campos[11]));
-	        r.setNaturalidade(campos[13]);
-	        r.setEmail(campos[14]);
+	    	r.setTelefone(campos[12]);
+	    	r.setCelular(campos[13]);
+	        r.setNaturalidade(campos[14]);
+	        r.setEmail(campos[15]);
 	        
             String date = campos[4];
 			

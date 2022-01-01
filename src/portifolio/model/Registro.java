@@ -15,8 +15,8 @@ public class Registro {
 	private String bairro;
 	private String cidade;
 	private Estado uf;
-	private Long celular;
-	private Long telefone;
+	private String telefone;
+	private String celular;
 	private String naturalidade;
 	private String email;
 	
@@ -91,18 +91,19 @@ public class Registro {
 	}
 	public void setUf(Estado uf) {
 		this.uf = uf;
+	
 	}
-	public Long getCelular() {
-		return celular;
-	}
-	public void setCelular(Long celular) {
-		this.celular = celular;
-	}
-	public Long getTelefone() {
+	public String getTelefone() {
 		return telefone;
 	}
-	public void setTelefone(Long telefone) {
+	public void setTelefone(String telefone) {
 		this.telefone = telefone;
+	}
+	public String getCelular() {
+		return celular;
+	}
+	public void setCelular(String celular) {
+		this.celular = celular;
 	}
 	public String getNaturalidade() {
 		return naturalidade;
@@ -122,7 +123,7 @@ public class Registro {
 		return "Registro [profissao=" + profissao + ", nomeCompleto=" + nomeCompleto + ", minimoSalario="
 				+ minimoSalario + ", maximoSalario=" + maximoSalario + ", dataNascimento=" + dataNascimento + ", cpf="
 				+ cpf + ", rg=" + rg + ", logradouro=" + logradouro + ", numeroCasa=" + numeroCasa + ", bairro="
-				+ bairro + ", cidade=" + cidade + ", uf=" + uf + ", celular=" + celular + ", telefone=" + telefone
+				+ bairro + ", cidade=" + cidade + ", uf=" + uf + ", telefone=" + telefone + ",celular=" + celular
 				+ ", naturalidade=" + naturalidade + ", email=" + email + "]";
 	}
 	
