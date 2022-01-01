@@ -4,6 +4,7 @@ import java.util.List;
 
 import portifolio.model.Registro;
 import portifolio.util.LeitorRemessa;
+import portifolio.util.RegistroPrint;
 
 public class PortifolioApp {
 	public static void main(String[] args) {
@@ -11,10 +12,8 @@ public class PortifolioApp {
 		
 		List<Registro> registros = leitor.converter("//home//wagner//Transferências//DELREMESSA.csv");
 		
-		for(Registro r: registros) {
-			System.out.println(r);
+		RegistroPrint printer = new RegistroPrint();
+		printer.imprimir(registros.get(0));
 		}
 	}
 	
-
-}

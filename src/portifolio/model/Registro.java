@@ -10,9 +10,13 @@ public class Registro {
 	private LocalDate dataNascimento;
 	private String cpf;
 	private String rg;
-	private Endereco endereco;
+	private String logradouro;
+	private Integer numeroCasa;
+	private String bairro;
+	private String cidade;
 	private Estado uf;
-	private String telefone;
+	private Long celular;
+	private Long telefone;
 	private String naturalidade;
 	private String email;
 	
@@ -58,11 +62,29 @@ public class Registro {
 	public void setRg(String rg) {
 		this.rg = rg;
 	}
-	public Endereco getEndereco() {
-		return endereco;
+	public String getLogradouro() {
+		return logradouro;
 	}
-	public void setEndereco(Endereco endereco) {
-		this.endereco = endereco;
+	public void setLogradouro(String logradouro) {
+		this.logradouro = logradouro;
+	}
+	public Integer getNumeroCasa() {
+		return numeroCasa;
+	}
+	public void setNumeroCasa(Integer numeroCasa) {
+		this.numeroCasa = numeroCasa;
+	}
+	public String getBairro() {
+		return bairro;
+	}
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+	public String getCidade() {
+		return cidade;
+	}
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
 	}
 	public Estado getUf() {
 		return uf;
@@ -70,10 +92,16 @@ public class Registro {
 	public void setUf(Estado uf) {
 		this.uf = uf;
 	}
-	public String getTelefone() {
+	public Long getCelular() {
+		return celular;
+	}
+	public void setCelular(Long celular) {
+		this.celular = celular;
+	}
+	public Long getTelefone() {
 		return telefone;
 	}
-	public void setTelefone(String telefone) {
+	public void setTelefone(Long telefone) {
 		this.telefone = telefone;
 	}
 	public String getNaturalidade() {
@@ -93,10 +121,10 @@ public class Registro {
 	public String toString() {
 		return "Registro [profissao=" + profissao + ", nomeCompleto=" + nomeCompleto + ", minimoSalario="
 				+ minimoSalario + ", maximoSalario=" + maximoSalario + ", dataNascimento=" + dataNascimento + ", cpf="
-				+ cpf + ", rg=" + rg + ", endereco=" + endereco + ", uf=" + uf + ", telefone=" + telefone + ", naturalidade="
-				+ naturalidade + ", email=" + email + "]";
-	}	
+				+ cpf + ", rg=" + rg + ", logradouro=" + logradouro + ", numeroCasa=" + numeroCasa + ", bairro="
+				+ bairro + ", cidade=" + cidade + ", uf=" + uf + ", celular=" + celular + ", telefone=" + telefone
+				+ ", naturalidade=" + naturalidade + ", email=" + email + "]";
+	}
 	
-}	
 
-
+}
