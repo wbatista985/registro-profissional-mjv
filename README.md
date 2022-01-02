@@ -18,6 +18,6 @@ Terceiro exercício  do <img  align="center" alt="html5" src="https://img.shield
 
 ![](https://github.com/digytal-code/java-code/blob/main/challenge/power-classes-project/ficha_profissional.jpg)
 
-## Formatar os campos de entrada e imprimir na tela para o usuario ,tratando os formatos, testando e usando classes nativas da linguagem
+#### Formatar os campos de entrada e imprimir na tela para o usuario tratando os formatos, testando e usando classes nativas da linguagem
 
 
