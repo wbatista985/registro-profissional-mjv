@@ -29,28 +29,37 @@ public class LeitorRemessa {
     	List<Registro> registros = new ArrayList();
     	
 	    for(String linha:conteudos) {
-	    	String [] campos = linha.split(";");
+            String [] campos = linha.split(";");
 	    	Registro r = new Registro();
 	    	r.setProfissao(campos[0]);
 	    	r.setNomeCompleto(campos[1]);
 	    	r.setMinimoSalario(Double.valueOf(campos[2]));
 	    	r.setMaximoSalario(Double.valueOf(campos[3]));
+	    	
+	    	String date = campos[4];
+			LocalDate data = LocalDate.parse(date,formatter);
+			r.setDataNascimento(data);
+		    	
 	    	r.setCpf(campos[5]);
 	    	r.setRg(campos[6]);
 	    	r.setLogradouro(campos[7]);
+	        
+	    	String numero = campos [8];
+	        Integer  number =  Integer.parseInt(numero);
+	        r.setNumeroCasa(number);
+				
 	    	r.setBairro(campos[9]);
 	    	r.setCidade(campos[10]);
 	    	r.setUf(Estado.valueOf(campos[11]));
-	    	r.setTelefone(campos[12]);
-	    	r.setCelular(campos[13]);
-	        r.setNaturalidade(campos[14]);
-	        r.setEmail(campos[15]);
-	        
-            String date = campos[4];
-			
-			LocalDate data = LocalDate.parse(date,formatter);
-			r.setDataNascimento(data);
-	    	
+	    	r.setCep(campos[12]);
+	    	r.setNaturalidade(campos[13]);
+	    	 r.setPais(campos[14]);
+	    	r.setTelefone(campos[15]);
+	    	r.setCelular(campos[16]);
+	        r.setEmail(campos[17]);
+            
+          
+           
 	    	registros.add(r);
 	    }
 	    
