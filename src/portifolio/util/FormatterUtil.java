@@ -47,7 +47,7 @@ public class FormatterUtil {
 		return localDate.format(formatter);
 	}
 	
-	public static String formataTelefone(String telefone) {
+	public static String formataTelefone(Long telefone) {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("(");
 

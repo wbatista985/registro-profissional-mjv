@@ -54,8 +54,16 @@ public class LeitorRemessa {
 	    	r.setCep(campos[12]);
 	    	r.setNaturalidade(campos[13]);
 	    	 r.setPais(campos[14]);
-	    	r.setTelefone(campos[15]);
-	    	r.setCelular(campos[16]);
+	    	 
+	    	String telefone = campos [15];
+		    Long tel =  Long.valueOf(telefone);
+		    r.setTelefone(tel);
+		    
+		    String celular = campos [16];
+		    Long cel =  Long.valueOf(celular);
+		    r.setCelular(cel);
+	    
+
 	        r.setEmail(campos[17]);
             
           

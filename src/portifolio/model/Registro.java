@@ -16,8 +16,8 @@ public class Registro {
 	private String cidade;
 	private Estado uf;
 	private String cep;
-	private String telefone;
-	private String celular;
+	private Long telefone;
+	private Long celular;
 	private String naturalidade;
 	private String pais;
 	private String email;
@@ -102,16 +102,16 @@ public class Registro {
 		this.cep = cep;
 	
 	}
-	public String getTelefone() {
+	public Long getTelefone() {
 		return telefone;
 	}
-	public void setTelefone(String telefone) {
+	public void setTelefone(Long telefone) {
 		this.telefone = telefone;
 	}
-	public String getCelular() {
+	public Long getCelular() {
 		return celular;
 	}
-	public void setCelular(String celular) {
+	public void setCelular(Long celular) {
 		this.celular = celular;
 	}
 	public String getNaturalidade() {

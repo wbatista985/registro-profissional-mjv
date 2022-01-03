@@ -2,6 +2,7 @@ package portifolio.app;
 
 import java.util.List;
 
+
 import portifolio.model.Registro;
 import portifolio.util.LeitorRemessa;
 import portifolio.util.RegistroPrint;
@@ -15,5 +16,7 @@ public class PortifolioApp {
 		RegistroPrint printer = new RegistroPrint();
 		printer.imprimir(registros.get(0));
 		}
+        
+
 	}
 	
