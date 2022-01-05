@@ -16,6 +16,7 @@ public class Registro {
 	private String cidade;
 	private Estado uf;
 	private String cep;
+	// pode ser string cel e tel
 	private Long telefone;
 	private Long celular;
 	private String naturalidade;
